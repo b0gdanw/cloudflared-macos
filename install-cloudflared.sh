@@ -14,6 +14,8 @@ sudo cloudflared service install
 cd
 rm -r tmp
 networksetup -setdnsservers Ethernet Empty
+networksetup -setdnsservers Wi-Fi Empty
 dscacheutil -flushcache
 networksetup -setdnsservers Ethernet 127.0.0.1
+networksetup -setdnsservers Wi-Fi 127.0.0.1
 nslookup cloudflare.com
