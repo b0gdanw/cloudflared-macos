@@ -1,8 +1,8 @@
 # Step 1: Creating temporary folder, downloading and unpacking cloudflared tgz
 mkdir ~/tmp
 cd ~/tmp
-curl -L https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-darwin-amd64.tgz -o cloudflared-stable-darwin-amd64.tgz
-tar -xvf cloudflared-stable-darwin-amd64.tgz 
+curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-darwin-amd64.tgz -o cloudflared-darwin-amd64.tgz
+tar -xvf cloudflared-darwin-amd64.tgz 
 
 # Step 2: Installing and configuring cloudflared as a service
 cp ./cloudflared /usr/local/bin/cloudflared
