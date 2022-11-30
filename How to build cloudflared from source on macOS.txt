@@ -1,0 +1,17 @@
+#Install Apple's Command Line Tools package by running:
+xcode-select --install
+#https://developer.apple.com/library/archive/technotes/tn2339/_index.html
+
+#Install go for Apple macOS ARM64 or x86-64 from https://go.dev/dl/ 
+
+#Build from source
+git clone https://github.com/cloudflare/cloudflared.git
+cd cloudflared
+make cloudflared
+go install github.com/cloudflare/cloudflared/cmd/cloudflared
+
+#Copy cloudflared into /usr/local/bin/
+sudo cp ./cloudflared /usr/local/bin/cloudflared
+
+#Check version
+cloudflared version
